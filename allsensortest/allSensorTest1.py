@@ -24,7 +24,7 @@ from array import*
 #---------------------------------------------------------------#
 # Temp Probe and SSR
 spi = busio.SPI(board.SCK, MOSI=board.MOSI, MISO=board.MISO)
-cs = digitalio.DigitalInOut(board.D5)  # Chip select of the MAX31865 board.
+cs = digitalio.DigitalInOut(board.D0)  # Chip select of the MAX31865 board.
 sensor = adafruit_max31865.MAX31865(spi, cs, rtd_nominal=1000, ref_resistor=4300, wires=3)
 relay = LED(12)
 
@@ -32,10 +32,11 @@ relay = LED(12)
 i2c = busio.I2C(board.SCL, board.SDA)
 ads = ADS.ADS1115(i2c)
 chan = AnalogIn(ads, ADS.P0, ADS.P1)
-ads.gain = 2
+ads.gain = 8
 
 # Step Stick and Arduino 
-port="/dev/ttyUSB0"
+#port="/dev/ttyUSB0"
+port="/dev/ttyACM0"
 baud=9600
 TO=5
 arduino = serial.Serial(port=port,baudrate=baud,timeout=TO)
