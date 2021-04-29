@@ -7,7 +7,7 @@ import pandas as pd
 import adafruit_max31865
 from array import*
 spi = busio.SPI(board.SCK, MOSI=board.MOSI, MISO=board.MISO)
-cs = digitalio.DigitalInOut(board.D7)  # Chip select of the MAX31865 board.
+cs = digitalio.DigitalInOut(board.CE1)  # Chip select of the MAX31865 board.
 sensor = adafruit_max31865.MAX31865(spi, cs, rtd_nominal=1000, ref_resistor=4300, wires=3)
 relay = LED(12)
 # Note you can optionally provide the thermocouple RTD nominal, the reference
@@ -28,7 +28,7 @@ df = pd.DataFrame([[temp, k]], columns = ['temp','gain'])
 timestep=1 #Set time for each temp control loop
 setpoint=30 #Target temp
 
-for i in range(0,1000): #Run for 1000 seconds
+for i in range(0,10000): #Run for 1000 seconds
     #Get data values
     value=sensor.temperature
     timeAll = time.localtime(time.time())
