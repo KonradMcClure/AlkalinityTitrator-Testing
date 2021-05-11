@@ -17,7 +17,7 @@ LCD_D4 = 18
 LCD_D5 = 23
 LCD_D6 = 24
 LCD_D7 = 25
-LED_ON = 15
+LCD_ON = 15
 
 # Keypad values
 KEY_0 = 10
