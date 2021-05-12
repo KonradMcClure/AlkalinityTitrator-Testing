@@ -30,52 +30,97 @@ KEY_6 = 16
 KEY_7 = 17
 KEY_8 = 18
 KEY_9 = 19
+KEY_A = 20
+KEY_B = 21
+KEY_C = 22
+KEY_D = 23
+KEY_STAR = 24
+KEY_HASH = 25
 
 # Keypad Pins
-KEY_ROW_0 = 1
-KEY_ROW_1 = 6
-KEY_ROW_2 = 5
-KEY_ROW_3 = 19
+# KEY_ROW_0 = 1
+# KEY_ROW_1 = 6
+# KEY_ROW_2 = 5
+# KEY_ROW_3 = 19
 
-KEY_COL_0 = 16
-KEY_COL_1 = 26
-KEY_COL_2 = 20
-KEY_COL_3 = 21
+# KEY_COL_0 = 16
+# KEY_COL_1 = 26
+# KEY_COL_2 = 20
+# KEY_COL_3 = 21
 
-KEY_LABELS = {
-  KEY_ROW_0: {
-    KEY_COL_0: '1',
-    KEY_COL_1: '2',
-    KEY_COL_2: '3',
-    KEY_COL_3: 'A',
+# Key Indexes
+# KEY_ROW_0 = 0
+# KEY_ROW_1 = 1
+# KEY_ROW_2 = 2
+# KEY_ROW_3 = 3
+
+# KEY_COL_0 = 0
+# KEY_COL_1 = 1
+# KEY_COL_2 = 2
+# KEY_COL_3 = 3
+
+KEY_VALUES = {
+  0: {
+    0: KEY_1,
+    1: KEY_2,
+    2: KEY_3,
+    3: KEY_A,
   },
 
-  KEY_ROW_1: {
-    KEY_COL_0: '4',
-    KEY_COL_1: '5',
-    KEY_COL_2: '6',
-    KEY_COL_3: 'B',
+  1: {
+    0: KEY_4,
+    1: KEY_5,
+    2: KEY_6,
+    3: KEY_B,
   },
 
-  KEY_ROW_2: {
-    KEY_COL_0: '7',
-    KEY_COL_1: '8',
-    KEY_COL_2: '9',
-    KEY_COL_3: 'C',
+  2: {
+    0: KEY_7,
+    1: KEY_8,
+    2: KEY_9,
+    3: KEY_C,
   },
 
-  KEY_ROW_3: {
-    KEY_COL_0: '*',
-    KEY_COL_1: '0',
-    KEY_COL_2: '#',
-    KEY_COL_3: 'D',
+  3: {
+    0: KEY_STAR,
+    1: KEY_0,
+    2: KEY_HASH,
+    3: KEY_D,
   }
 }
 
+KEY_LABELS = {
+  0: {
+    0: '1',
+    1: '2',
+    2: '3',
+    3: 'A',
+  },
 
+  1: {
+    0: '4',
+    1: '5',
+    2: '6',
+    3: 'B',
+  },
 
-KEY_ROWS = [KEY_ROW_0, KEY_ROW_1, KEY_ROW_2, KEY_ROW_3]
-KEY_COLS = [KEY_COL_0, KEY_COL_1, KEY_COL_2, KEY_COL_3]
+  2: {
+    0: '7',
+    1: '8',
+    2: '9',
+    3: 'C',
+  },
+
+  3: {
+    0: '*',
+    1: '0',
+    2: '#',
+    3: 'D',
+  }
+}
+
+# KEY_ROWS = [KEY_ROW_0, KEY_ROW_1, KEY_ROW_2, KEY_ROW_3]
+# KEY_COLS = [KEY_COL_0, KEY_COL_1, KEY_COL_2, KEY_COL_3]
  
 # Define some device constants
 LCD_WIDTH = 20    # Maximum characters per line

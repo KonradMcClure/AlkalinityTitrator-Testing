@@ -40,7 +40,7 @@ def main():
   time.sleep(0.5)
 
   test_lcd()
-  # test_keypad()
+  #test_keypad()
 
 
 # def display_list(list_to_display):
@@ -196,6 +196,7 @@ def keypad_poll():
     for col in KEY_COLS:
       if GPIO.input(col):
         GPIO.output(row,0)
+        print("Button: ", row, " ", col)
         return KEY_LABELS[row][col]
     GPIO.output(row,0)
 
