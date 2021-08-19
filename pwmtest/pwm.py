@@ -5,8 +5,8 @@ import math
 
 def change_pwm(stirrer, target):
 	direction = math.copysign(1, target - stirrer.duty_cycle)
-	next_step = min(abs(target - stirrer.duty_cycle), 1000)
 	while stirrer.duty_cycle != target:
+		next_step = min(abs(target - stirrer.duty_cycle), 1000)
 		stirrer.duty_cycle = stirrer.duty_cycle + (next_step * direction)
 		print("Stirrer set to ", stirrer.duty_cycle)
 		time.sleep(0.2)
