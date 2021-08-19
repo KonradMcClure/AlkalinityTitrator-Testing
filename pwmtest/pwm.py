@@ -28,13 +28,13 @@ while True:
 			change_pwm(stirrer, 12000)
 		elif selection == 3:
 			stirrer.duty_cycle = 0
+			print("Stirrer set to ", stirrer.duty_cycle)
 		elif selection == 4:
 			target = int(input("\tEnter duty cycle: "))
 			change_pwm(stirrer, target)
 		else:
 			print("Invalid input")
 		
-		print("Stirrer set to ", stirrer.duty_cycle)
 		time.sleep(1.0)
 		
 	time.sleep(1.0)
