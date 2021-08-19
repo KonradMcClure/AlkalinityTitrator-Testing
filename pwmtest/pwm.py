@@ -9,7 +9,7 @@ def change_pwm(stirrer, target):
 		next_step = min(abs(target - stirrer.duty_cycle), 100)
 		stirrer.duty_cycle = stirrer.duty_cycle + (next_step * direction)
 		print("Stirrer set to ", stirrer.duty_cycle)
-		time.sleep(0.1)
+		time.sleep(0.25)
 
 stirrer = pwmio.PWMOut(board.D13, duty_cycle=0,frequency=100)
 
