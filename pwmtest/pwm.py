@@ -11,7 +11,7 @@ def change_pwm(stirrer, target):
 		print("Stirrer set to ", stirrer.duty_cycle)
 		time.sleep(0.25)
 
-stirrer = pwmio.PWMOut(board.D13, duty_cycle=0,frequency=50)
+stirrer = pwmio.PWMOut(board.D13, duty_cycle=0,frequency=100)
 
 while True:
 	input("Press enter to start up")
